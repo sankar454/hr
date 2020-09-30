@@ -18,7 +18,7 @@ public class Employee {
 
 	@Id
 	@Column(name = "EMPLOYEE_ID")
-	private Integer employeeId;
+	private Integer id;
 	
 	private String firstName;
 	
@@ -40,15 +40,13 @@ public class Employee {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "MANAGER_ID")
 	private Employee manager;
-	
-	private Integer departmentId;
 
-	public Integer getEmployeeId() {
-		return employeeId;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setEmployeeId(Integer employeeId) {
-		this.employeeId = employeeId;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getFirstName() {
@@ -115,14 +113,6 @@ public class Employee {
 		this.commissionPct = commissionPct;
 	}
 	
-	public Integer getDepartmentId() {
-		return departmentId;
-	}
-
-	public void setDepartmentId(Integer departmentId) {
-		this.departmentId = departmentId;
-	}
-
 	public Employee getManager() {
 		return manager;
 	}

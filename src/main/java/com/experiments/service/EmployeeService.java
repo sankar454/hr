@@ -2,9 +2,10 @@ package com.experiments.service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.experiments.entity.Employee;
 import com.experiments.repository.EmployeeRepository;
